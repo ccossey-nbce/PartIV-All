@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.TimeTap.API", "..\..\.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.NBCE.Helpers", "..\..\..\Shared\Shared.NBCE.Helpers\Shared.NBCE.Helpers.csproj", "{3B623A5D-CF68-6AEE-E5A3-BBE65FEFE0B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartIV.Api.Win", "..\PartIV.Api.Win\PartIV.Api.Win.csproj", "{F04206AA-7772-4020-9469-864FCEA8C924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3B623A5D-CF68-6AEE-E5A3-BBE65FEFE0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B623A5D-CF68-6AEE-E5A3-BBE65FEFE0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B623A5D-CF68-6AEE-E5A3-BBE65FEFE0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04206AA-7772-4020-9469-864FCEA8C924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04206AA-7772-4020-9469-864FCEA8C924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04206AA-7772-4020-9469-864FCEA8C924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04206AA-7772-4020-9469-864FCEA8C924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
