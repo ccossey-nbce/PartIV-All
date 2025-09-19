@@ -12,4 +12,8 @@
     <ProjectReference Include="..\..\..\Shared\Shared.NBCE.Helpers\Shared.NBCE.Helpers.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entity\" />
+  </ItemGroup>
+
 </Project>

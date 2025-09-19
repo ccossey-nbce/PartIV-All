@@ -1,24 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
+using PartIV.Api.Win;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+#if DEBUG
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions {
+    EnvironmentName = Environments.Development
+});
+#else
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions {
+        EnvironmentName = Environments.Production
+    });
+#endif
+
+builder.Services.AddHttpClient();
+builder.Services.AddHostedService<Startup>();
+
+// -------------------------------------------------------------------------------------------------
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();
+try {
+    app.Run();
+}
+catch (System.Threading.Tasks.TaskCanceledException) {
+    // so what...we know the task is going to cancel..we told it to
+}
+catch (Exception) {
+    throw;
+}
